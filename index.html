@@ -24,7 +24,8 @@
     <nav id="main-nav">
         <a class="nav-logo" href="#">Drayn's Workshop</a>
         <ul class="nav-links">
-            <li><a href="news.html" style="color: var(--accent);">News</a></li> <li><a href="#feedback">Contact</a></li>
+            <li><a href="news.html" style="color: var(--accent);">News</a></li> 
+            <li><a href="#feedback">Contact</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#wip">W.I.P</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -72,7 +73,9 @@
     <div class="section-bg-wrap" id="about-wrap">
         <section id="about" class="section">
             <div class="section-label">Who's here</div>
-            <h2 class="section-title reveal">About</h2>
+            <div class="reveal">
+                <h2 class="section-title">About</h2>
+            </div>
             <div class="about-grid">
                 <div class="about-text reveal">
                     <p class="shimmer-hover">I'm <strong>Drayn</strong> — an artist &amp; game dev, or just some sleepy fox .w.</p>
@@ -135,7 +138,9 @@
     <div class="section-bg-wrap" id="projects-wrap">
         <section id="projects" class="section">
             <div class="section-label">Selected Work</div>
-            <h2 class="section-title reveal">Projects</h2>
+            <div class="reveal">
+                <h2 class="section-title">Projects</h2>
+            </div>
             <div class="inner reveal">
                 <a class="project-card" href="https://the-drayn.itch.io/ghostly" target="_blank" rel="noopener">
                     <img src="IMG/ghostly.jpg" alt="Ghostly"/>
@@ -166,7 +171,9 @@
     <div class="section-bg-wrap" id="github-wrap">
         <section id="github" class="section">
             <div class="section-label">Open Source</div>
-            <h2 class="section-title reveal">GitHub Projects</h2>
+            <div class="reveal">
+                <h2 class="section-title">GitHub Projects</h2>
+            </div>
             <div class="github-grid reveal" id="github-grid">
                 <div class="repo-card" style="opacity:0.5; pointer-events:none;">
                     <div class="repo-name">Loading…</div>
@@ -186,10 +193,21 @@
     <div class="section-bg-wrap" id="feedback-wrap">
         <section id="feedback" class="section">
             <div class="section-label">Feedback</div>
-            <h2 class="section-title reveal">Send Feedback</h2>
-            <p class="reveal" style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;max-width:500px;">
-                Found a bug? Have an idea? Just want to say something? I read everything .w.
-            </p>
+            
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+                <div class="reveal">
+                    <h2 class="section-title" style="margin-bottom: 0;">Send Feedback</h2>
+                    <p style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;max-width:500px;">
+                        Found a bug? Have an idea? Just want to say something? I read everything .w.
+                    </p>
+                </div>
+                <div class="reveal">
+                    <a href="https://discord.com/channels/787022102963814441/1251902184954527864" target="_blank" rel="noopener" class="about-tag" style="text-decoration:none; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1.2rem; border-color: var(--accent); color: var(--accent); font-weight: 600; transition: all 0.3s ease;">
+                        <i class="fab fa-discord"></i> View All Feedbacks ↗
+                    </a>
+                </div>
+            </div>
+
             <div class="feedback-wrap reveal">
                 <div class="feedback-tabs">
                     <button class="feedback-tab active" data-type="suggestion" data-emoji="💡" data-color="10181046">
@@ -207,7 +225,7 @@
                 </div>
 
                 <form class="feedback-form" id="feedback-form">
-                       <div class="feedback-fields" id="bug-fields" style="display:none;">
+                    <div class="feedback-fields" id="bug-fields" style="display:none;">
                         <div class="form-group">
                             <label class="form-label">Where did it happen?</label>
                             <input class="form-input" type="text" id="bug-location" placeholder=""/>

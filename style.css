@@ -228,7 +228,9 @@ section {
     opacity: 0.4;
 }
 
-.section-title {
+/* Объединяем стили для обычного состояния и состояния внутри reveal */
+.section-title,
+.reveal.visible .section-title {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -236,10 +238,13 @@ section {
     line-height: 1.05;
     margin-bottom: 1rem;
     cursor: default;
-    transition: letter-spacing 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+    /* Явно указываем transition для letter-spacing */
+    transition: letter-spacing 0.35s ease-out, color 0.4s ease, opacity 0.7s ease, transform 0.7s ease;
 }
-.section-title:hover { letter-spacing: 0.06em; }
 
+.section-title:hover { 
+    letter-spacing: 0.06em; 
+}
 .section-bg-wrap {
     position: relative;
     overflow: hidden;
@@ -875,6 +880,16 @@ footer p { font-size: 0.75rem; color: var(--muted); }
 }
 @media (max-width: 500px) {
     .hero-name { font-size: clamp(2.8rem, 14vw, 5rem); }
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+::-moz-selection {
+    background-color: var(--accent);
+    color: var(--bg);
 }
 /* #endregion */
 /* #region CSS Update */
