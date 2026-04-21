@@ -204,7 +204,7 @@ async function fetchGitHub() {
 }
 
 function initFeedback() {
-    const WORKER_URL = 'https://discord.com/api/webhooks/1480166822669189212/mKEQVYS2SXqybFdm1ml1yctArvo2ZmZ8cL5Nvr9iRN5Sh7obRbOQi7Ff6Grzofhx8vEk';
+    const WORKER_URL = '';
     const tabs = document.querySelectorAll('.feedback-tab');
     const bugFields = document.getElementById('bug-fields');
     const msgLabel = document.getElementById('message-label');
